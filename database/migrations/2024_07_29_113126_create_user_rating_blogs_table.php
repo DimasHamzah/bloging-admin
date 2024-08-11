@@ -17,7 +17,10 @@ return new class extends Migration
                 ->constrained('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
-            $table->foreignId('blog_id')->constrained('blogs');
+            $table->foreignId('blog_id')
+                ->constrained('blogs')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->enum('rating', [1,2,3,4,5]);
             $table->timestamps();
         });
