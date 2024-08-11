@@ -17,9 +17,9 @@ class BlogFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => $this->faker->numberBetween(1,10),
+            'user_id' => $this->faker->numberBetween(1,5),
             'slug' => $this->faker->slug(),
-            'category_id' => $this->faker->numberBetween(1,10),
+            'category_id' => $this->faker->numberBetween(1,5),
             'title' => $this->faker->word(25, true),
             'subtitle' => $this->faker->word(50, true),
             'description' => $this->faker->paragraph(),

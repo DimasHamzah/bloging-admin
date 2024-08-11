@@ -17,8 +17,8 @@ class UserLikeBlogFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => $this->faker->numberBetween(1, 10),
-            'blog_id' => $this->faker->numberBetween(1, 10),
+            'user_id' => $this->faker->numberBetween(1, 5),
+            'blog_id' => $this->faker->numberBetween(1, 5),
             'like' => $this->faker->numberBetween(0, 1),
         ];
     }

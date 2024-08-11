@@ -17,8 +17,8 @@ class BlogTagFactory extends Factory
     public function definition(): array
     {
         return [
-            'blog_id' => $this->faker->numberBetween(1, 10),
-            'tag_id' => $this->faker->numberBetween(1, 10),
+            'blog_id' => $this->faker->numberBetween(1, 5),
+            'tag_id' => $this->faker->numberBetween(1, 5),
         ];
     }
 }
