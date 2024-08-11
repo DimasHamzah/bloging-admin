@@ -12,6 +12,6 @@ class UserKomentarBlogSeeder extends Seeder
      */
     public function run(): void
     {
-        UserKomentarBlog::factory(100)->create();
+        UserKomentarBlog::factory(5)->create();
     }
 }

@@ -13,8 +13,14 @@ return new class extends Migration
     {
         Schema::create('user_like_blogs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users');
-            $table->foreignId('blog_id')->constrained('blogs');
+            $table->foreignId('user_id')
+                ->constrained('users')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+            $table->foreignId('blog_id')
+                ->constrained('blogs')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
             $table->boolean('like');
             $table->timestamps();
         });

@@ -18,6 +18,7 @@ class BlogFactory extends Factory
     {
         return [
             'user_id' => $this->faker->numberBetween(1,10),
+            'slug' => $this->faker->slug(),
             'category_id' => $this->faker->numberBetween(1,10),
             'title' => $this->faker->word(25, true),
             'subtitle' => $this->faker->word(50, true),

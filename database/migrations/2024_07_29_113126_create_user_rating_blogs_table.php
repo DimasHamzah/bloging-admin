@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('user_rating_blogs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('user_id')
+                ->constrained('users')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->foreignId('blog_id')->constrained('blogs');
             $table->enum('rating', [1,2,3,4,5]);
             $table->timestamps();

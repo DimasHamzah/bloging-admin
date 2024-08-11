@@ -16,6 +16,7 @@ class extends Migration
     {
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
+            $table->string('slug');
             $table->foreignId('user_id')->constrained('users', 'id');
             $table->foreignId('category_id')->constrained('categories', 'id');
             $table->string('title', 25);

@@ -10,6 +10,8 @@ class Blog extends Model
     use HasFactory;
 
     protected $fillable = [
+        'slug',
+
         'user_id',
 
         'category_id',
@@ -22,4 +24,9 @@ class Blog extends Model
 
         'images'
     ];
+
+    public function categories()
+    {
+        return $this->belongsTo(Category::class, 'category_id', 'id');
+    }
 }

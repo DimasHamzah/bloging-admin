@@ -13,6 +13,6 @@ class UserRatingBlogSeeder extends Seeder
      */
     public function run(): void
     {
-        UserRatingBlog::factory(100)->create();
+        UserRatingBlog::factory(5)->create();
     }
 }

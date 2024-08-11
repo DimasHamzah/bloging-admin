@@ -12,6 +12,6 @@ class BlogTagSeeder extends Seeder
      */
     public function run(): void
     {
-        BlogTag::factory(100)->create();
+        BlogTag::factory(5)->create();
     }
 }
